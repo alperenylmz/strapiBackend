@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_layout_abouts",
+  "info": {
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "coinSites": {
+      "type": "component",
+      "repeatable": true,
+      "component": "logos.coin-places"
+    },
+    "brnTitle": {
+      "type": "string"
+    },
+    "brnDescription": {
+      "type": "blocks"
+    },
+    "totalSupply": {
+      "type": "integer"
+    },
+    "maxSupply": {
+      "type": "integer"
+    },
+    "lineGraph": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_video_sections",
+  "info": {
+    "displayName": "Video Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "brnBackgroundGif": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

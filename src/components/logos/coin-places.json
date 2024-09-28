@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_logos_coin_places",
+  "info": {
+    "displayName": "coinPlaces",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "coinPlaces": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

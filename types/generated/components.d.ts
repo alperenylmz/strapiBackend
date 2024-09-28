@@ -62,6 +62,109 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface LogosCoinPlaces extends Struct.ComponentSchema {
+  collectionName: 'components_logos_coin_places';
+  info: {
+    displayName: 'coinPlaces';
+    description: '';
+  };
+  attributes: {
+    coinPlaces: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
+export interface LayoutVideoSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_video_sections';
+  info: {
+    displayName: 'Video Section';
+    description: '';
+  };
+  attributes: {
+    brnBackgroundGif: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
+export interface LayoutStrategicPriorities extends Struct.ComponentSchema {
+  collectionName: 'components_layout_strategic_priorities';
+  info: {
+    displayName: 'strategicPriorities';
+    description: '';
+  };
+  attributes: {
+    strategicTitle: Schema.Attribute.String;
+    strategicDescription: Schema.Attribute.Blocks;
+    strategicBlock: Schema.Attribute.Component<'blocks.strategic-blocks', true>;
+  };
+}
+
+export interface LayoutOurPartners extends Struct.ComponentSchema {
+  collectionName: 'components_layout_our_partners';
+  info: {
+    displayName: 'ourPartners';
+    description: '';
+  };
+  attributes: {
+    ourPartners: Schema.Attribute.String;
+    ourPartnerDescription: Schema.Attribute.Blocks;
+    ourPartnersBlocks: Schema.Attribute.Component<'blocks.partner-block', true>;
+  };
+}
+
+export interface LayoutMailSection extends Struct.ComponentSchema {
+  collectionName: 'components_layout_mail_sections';
+  info: {
+    displayName: 'mailSection';
+    description: '';
+  };
+  attributes: {
+    Title: Schema.Attribute.Blocks;
+    Description: Schema.Attribute.Blocks;
+  };
+}
+
+export interface LayoutAbout extends Struct.ComponentSchema {
+  collectionName: 'components_layout_abouts';
+  info: {
+    displayName: 'About';
+    description: '';
+  };
+  attributes: {
+    coinSites: Schema.Attribute.Component<'logos.coin-places', true>;
+    brnTitle: Schema.Attribute.String;
+    brnDescription: Schema.Attribute.Blocks;
+    totalSupply: Schema.Attribute.Integer;
+    maxSupply: Schema.Attribute.Integer;
+    lineGraph: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
+export interface BlocksStrategicBlocks extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_strategic_blocks';
+  info: {
+    displayName: 'strategicBlocks';
+    description: '';
+  };
+  attributes: {
+    strategicIcon: Schema.Attribute.Media<'images' | 'files'>;
+    strategicTitle: Schema.Attribute.String;
+    strategicDescription: Schema.Attribute.Blocks;
+  };
+}
+
+export interface BlocksPartnerBlock extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_partner_blocks';
+  info: {
+    displayName: 'partnerBlock';
+    description: '';
+  };
+  attributes: {
+    partnerIcon: Schema.Attribute.Media<'images' | 'files'>;
+    partnerDescription: Schema.Attribute.Blocks;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -70,6 +173,14 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.quote': SharedQuote;
       'shared.media': SharedMedia;
+      'logos.coin-places': LogosCoinPlaces;
+      'layout.video-section': LayoutVideoSection;
+      'layout.strategic-priorities': LayoutStrategicPriorities;
+      'layout.our-partners': LayoutOurPartners;
+      'layout.mail-section': LayoutMailSection;
+      'layout.about': LayoutAbout;
+      'blocks.strategic-blocks': BlocksStrategicBlocks;
+      'blocks.partner-block': BlocksPartnerBlock;
     }
   }
 }

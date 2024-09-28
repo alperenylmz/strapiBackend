@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_layout_mail_sections",
+  "info": {
+    "displayName": "mailSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "blocks"
+    },
+    "Description": {
+      "type": "blocks"
+    }
+  }
+}

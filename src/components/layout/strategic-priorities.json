@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_layout_strategic_priorities",
+  "info": {
+    "displayName": "strategicPriorities",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "strategicTitle": {
+      "type": "string"
+    },
+    "strategicDescription": {
+      "type": "blocks"
+    },
+    "strategicBlock": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.strategic-blocks"
+    }
+  }
+}
